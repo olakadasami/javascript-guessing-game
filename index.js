@@ -16,7 +16,8 @@ const compareGuess = (computer, user) => {
 // Fuction for Game
 const userGuess = (x, y) => {
     // start the game
-    alert(`Welcome to Level ${y - 1} of Olakada's Guessing Game`)
+    const username = prompt("Choose your Username: ")
+    alert(`Welcome ${username} to Level ${y - 1} of Olakada's Guessing Game`)
     // get computer random
     const computer = computerRandom(x, y)
     // get user input
