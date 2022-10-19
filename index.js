@@ -39,10 +39,11 @@ let points = 0
 let goal = 2
 
 
+const gameStart = () => {
 
-window.addEventListener('load', () => {
     const username = prompt("Choose your Username: ")
     for (y = 1; y < 50; y++) {
         userGuess(1, goal, username)
     }
-})
+}
+gameStart()
