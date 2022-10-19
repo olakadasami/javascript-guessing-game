@@ -14,9 +14,9 @@ const compareGuess = (computer, user) => {
 }
 
 // Fuction for Game
-const userGuess = (x, y) => {
+const userGuess = (x, y, username) => {
     // start the game
-    const username = prompt("Choose your Username: ")
+
     alert(`Welcome ${username} to Level ${y - 1} of Olakada's Guessing Game`)
     // get computer random
     const computer = computerRandom(x, y)
@@ -38,6 +38,11 @@ const userGuess = (x, y) => {
 let points = 0
 let goal = 2
 
-for (y = 1; y < 50; y++) {
-    userGuess(1, goal)
-}
+
+
+window.addEventListener('load', () => {
+    const username = prompt("Choose your Username: ")
+    for (y = 1; y < 50; y++) {
+        userGuess(1, goal, username)
+    }
+})
